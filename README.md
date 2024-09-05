@@ -1,50 +1,59 @@
-# Welcome to your Expo app 👋
+Installation
+You can install this package using npm:
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+bash
+npm install your-package-name
 
-## Get started
+Usage
+Below is an example of how to use the Button component in your React Native project:
 
-1. Install dependencies
+tsx
 
-   ```bash
-   npm install
-   ```
+import React from "react";
+import { View, Text } from "react-native";
+import { Button } from "your-package-name";
 
-2. Start the app
+export default function App() {
+  return (
+    <View>
+      <Button
+        onPress={() => alert("Button Pressed")}
+        type="primary"
+        variant="solid"
+        size="lg"
+      >
+        Press Me
+      </Button>
+    </View>
+  );
+}
 
-   ```bash
-    npx expo start
-   ```
+Props
+Prop	Type	Default	Description
+children	ReactNode	-	The text or elements to display inside the button.
+onPress	function	-	Function to call when the button is pressed.
+type	string	primary	The color type of the button (primary, secondary, success, danger).
+style	object	-	Additional styles for the button.
+variant	string	solid	Button appearance (solid, outline, link).
+size	string	md	Button size (xs, sm, md, lg, xl).
+Button Types
+The type prop allows you to define different color themes for the button:
 
-In the output, you'll find options to open the app in a
+primary: Blue color
+secondary: Gray color
+success: Green color
+danger: Red color
+Button Variants
+The variant prop defines how the button looks:
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+solid: A button with a solid background.
+outline: A transparent button with a border.
+link: A button without a border or background, appearing like a link.
+Button Sizes
+The size prop adjusts the size of the button:
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+xs: Extra small button
+sm: Small button
+md: Medium button (default)
+lg: Large button
+xl: Extra large button

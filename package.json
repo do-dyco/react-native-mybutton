@@ -1,5 +1,5 @@
 {
-  "name": "react-native-mybutton",
+  "name": "react-native-mybutton-att",
   "main": "expo-router/entry",
   "version": "1.0.0",
   "scripts": {
@@ -45,7 +45,6 @@
     "react-test-renderer": "18.2.0",
     "typescript": "~5.3.3"
   },
-  "private": true,
   "description": "This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).",
   "repository": {
     "type": "git",
